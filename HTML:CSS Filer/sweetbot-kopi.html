@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SweetBot - Flow 4 Projekt</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+	
+<style>
+/***************GENERELT STYLING START**************/
+	html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		text-align: center;
+}
+	img {
+		width: 100%;
+		height: 100%;
+}
+
+	section {
+		min-height: 100%;
+		min-width: 100%;
+}
+
+	a {
+		text-decoration: none;
+}
+
+	li {
+		list-style-type: none;
+}
+
+	h1, h2, h3, a {
+		font-family: 'Lato', sans-serif;
+		font-weight: 500;
+		color: #000;
+		text-transform: uppercase;
+}
+	img {
+		max-width: 100%;
+		height: auto;
+}
+	h2 {
+		color: #5d7177;
+}
+
+	h3 {
+		font-size: 40px;
+		padding-top: 8%;
+		margin-bottom: 5px;
+}
+
+	h4, p {
+		font-family: 'Lato', serif;
+		color: #494949;
+}
+/**************GENERELT STYLING SLUT*****************/
+	
+/****************HJEM STYLING START******************/
+	#hjem {
+		background-image: url(billeder/sweetbot_img_baggrund.jpg);
+		background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		width: 100%;
+}
+/****************HJEM STYLING SLUT****************''***/
+	
+/****************SWEETBOT STYLING SLUT*****************/
+	
+	.sbiphone {
+		width: 10%;
+		height: 40%;
+		position: absolute;
+		margin-left: 250px;
+		margin-top: 50px;
+	}
+	.sbipad {
+		width: 20%;
+		height: 50%;
+		position: absolute;
+		margin-left: 400px;
+		margin-top: -30px;
+	}
+	
+	.sweetbot_t {
+		margin-top: -50px;
+		margin-left: -550px;
+		font-size: 30px;
+		font-family: "Raleway", sans-serif;
+}
+	.sweetbot_b {
+		padding-left: 5%;
+		float: left;
+		width: 40%;
+		position: absolute;
+		margin-top: 5%;
+		text-align: justify;
+		display: block;
+		direction: ltr;
+}
+	
+	#faktaboks {
+	background-color: white;
+	width: 230px;
+	border: 1px solid black;
+	margin: 10px;
+	height: 270px;
+	margin-left: 48%;
+	margin-top: 75px;
+	position: absolute;
+	font-size: 15px;
+	font-family: "lato", sans-serif;
+}
+	.faktabokst {
+	position: absolute;
+	font-size: 150%;
+	font-family: "Raleway", sans-serif;
+	padding-top: 150px;
+	padding-left: 7%;
+}
+
+	.faktaul {
+	list-style-type: circle;
+	position: absolute;
+	padding-right: -20px;
+}
+	.ressourcer {
+		font-size: 15px;
+		font-weight: bold;
+	}
+	
+	.prjbeskrivelse {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 290px;
+		margin-left: -640px;
+}	
+	.prjbeskrivelse:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.remake {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 290px;
+		margin-left: -270px;
+	}
+	.remake:hover {
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+	.prjdone1 {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 290px;
+		margin-left: -450px;
+}	
+	.prjdone1:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.tilbage {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: -75px;
+		margin-left: -680px;
+	}
+	.tilbage:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	/****************SWEETBOT STYLING SLUT*****************/
+	
+	
+	/******************MEDIA QUERIE FOR DESKTOP VERSION******************/	
+	@media (min-width: 1824px) and (max-width:2560px) {
+		.tilbage {
+			position: absolute;
+			margin-left: -49%;
+			margin-top: -5%;
+		}
+		.prjbeskrivelse {
+			margin-left: -45%;
+			font-size: 12px;
+			margin-top: 16%;
+		}
+		.prjdone1 {
+			margin-left: -31.5%;
+			font-size: 12px;
+			margin-top: 16%;
+		}
+		.remake {
+			margin-left: -20%;
+			margin-top: 16%;
+			font-size: 12px;
+		}
+		.sweetbot_b {
+			width: 30%;
+		}
+		.sweetbot_t {
+			margin-right: -25%;
+			padding-top: 6%
+		}
+		.sbipad {
+			width: 13%;
+			margin-top: 0;
+			height: 50%;
+			margin-left: 33%;
+			position: absolute;
+		}
+		.sbiphone {
+			width: 8%;
+			height: 40%;
+			margin-top: 4.5%;
+			margin-left: 20%;
+			position: absolute;
+		}
+		#faktaboks {
+	background-color: white;
+	width: 230px;
+	border: 1px solid black;
+	margin: 10px;
+	height: 280px;
+	margin-left: 45%;
+	margin-top: 100px;
+	position: absolute;
+	font-size: 15px;
+	font-family: "lato", sans-serif;
+}
+	}
+	/********************************MEDIA QUERIE FOR TABLET VERSION*********************************/
+	
+	@media (min-width: 768px) and (max-width: 1024px) {
+	/******************HJEM START*********************/
+	#hjem {
+		background-image: url(billeder/sweetbot_img_ipad.jpg);
+		background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		width: 100%;
+		}
+		/******************HJEM START*********************/
+		
+		
+		/****************SWEETBOT START****************/
+		.sbiphone {
+			display: none;
+		}
+		.sbipad {
+			width: 30%;
+			height: 50%;
+			margin-left: 15%;
+			margin-top: -3%;
+		}
+		.sweetbot_t {
+		margin-left: -40%;
+		font-size: 150%;
+		}
+		.sweetbot_b {
+			width: 50%;
+		}
+		.hotbot {
+			width: 30%; 
+			height: 50%;
+			position: relative;
+			margin-left: 19%;
+			margin-top: -2%;
+			position: absolute;
+		}	
+		.prjbeskrivelse {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 120%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 30%;
+			margin-left: -455px;
+		}	
+	
+		.prjbeskrivelse:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		.remake {
+			margin-top: 30%;
+			margin-left: -40px;
+		}
+		.prjdone1 {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 120%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 30%;
+			margin-left: -235px;
+		}	
+		.prjdone1:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		.tilbage {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 120%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: -5%;
+			margin-left: -490px;
+		}
+		.tilbage:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+}
+		#faktaboks {
+			display: none;
+		}
+	}
+	/****************SWEETBOT SLUT****************/
+	
+/************************************MEDIA QUERIE FOR MOBIL VERSION******************************/	
+@media (min-width: 320px) and (max-width: 480px) {
+	/******************HJEM START*******************/
+		#hjem {
+			background-image: url(billeder/sweetbotiphonebg.jpg);
+			background-attachment: fixed;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+			width: 100%;
+		}
+	/****************SWEETBOT START****************/
+		.sweetbot_t {
+			margin-left: 0%;
+			font-size: 80%;
+			margin-top: 3%;
+			font-weight: bolder;
+		}
+		.sweetbot_b {
+			margin-top: 10%;
+			font-size: 70%;
+			width: 95%;
+			padding-left: 10px;
+		}	
+		.tilbage {
+			display: inline-block;
+			font-size: 7px;
+			line-height: 80%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 8px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: -15%;
+			margin-left: -49%;
+		}
+		.tilbage:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		.hotbot {
+			display: none;
+		}	
+		.prjbeskrivelse {
+			display: inline-block;
+			font-size: 7px;
+			line-height: 70%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 50%;
+			margin-left: -185px;
+		}	
+		.prjbeskrivelse:hover{
+			color: #a34f4f;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		.prjdone1 {
+			display: inline-block;
+			font-size: 7px;
+			line-height: 80%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 50%;
+			margin-left: -75px;
+		}	
+		.prjdone1:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		.remake {
+		margin-left: 30px;
+		font-size: 7px;
+		line-height: 80%;
+		margin-top: 50%;
+	}
+	#faktaboks {
+		display: none;
+	}
+		/****************SWEETBOT SLUT****************/
+}
+</style>	
+</head>
+
+<body>
+<!--------------------------------Forside/Hjem sektionen starter her------------------------------>
+<section id="hjem">
+</section>
+<!--------------------------------Forside/Hjem sektionen slutter her------------------------------>
+	
+<!--------------------------------SWEETBOT sektionen starter her---------------------------------->	
+<section id="sweetbot">
+		<h3 class="sweetbot_t">Sweetbot - Flow 4 Projekt</h3>
+		<p class="sweetbot_b">I Flow 4, skulle vi for første gange arbejde med jQuery, responsive design samt  wbs, pbs og Gantt kort.<br><br>På baggrund af den læring vi fik i flowet, skulle vi udforme en hjemmeside i grupper for første gang. Den skulle kodes i HTML/CSS samt indeholde jQuery og være responsive. Vi skulle gøre brug af pbs, wbs og gantt kort for at komme frem til det endelig mål som var et færdigt produkt.
+		<br><br><strong>Har du yderligere interesse i projektet, kan du downloade følgende herunder: Projekt beskrivelse og det færdige produkt.</strong>
+		<div id="faktaboks">
+	<ul class="faktaul">
+	<li style="list-style-type: circle;">1. Semester</li>
+	<br>
+	<li style="list-style-type: circle;">Flow 4</li>	
+	<br>
+	<li style="list-style-type: circle;">Gruppearbejde</li>	
+
+	<h3 class="ressourcer">Ressourcer</h3>
+	<br>
+	<li style="list-style-type: circle;">HTML/CSS</li>	
+	<br>
+	<li style="list-style-type: circle;">jQuery</li>
+	<br>
+	<li style="list-style-type: circle;">Adobe Dreamviewer</li>
+	</ul>
+	</div>
+		<img class="sbiphone" src="billeder/sweetbot_app.png">
+		<img class="sbipad" src="billeder/sweetbot_ipad.png">
+		</p>
+	<a href="Opgaver/Sweetbot – Flow 4 projekt Beskrivelse.pdf" class="prjbeskrivelse">Opgave beskrivelse</a>
+	<a href="http://stefandimitrijevic.dk/sweetbot/one-page.html" class="prjdone1">Færdigt produkt</a>
+	<a href="https://xd.adobe.com/view/c3b32ca2-65c1-4d56-bb34-0c320886c170" class="remake">Remake</a>
+	<a href="index.html#projekter" class="tilbage">Gå tilbage</a>
+<!--------------------------------SWEETBOT sektionen slutter her---------------------------------->	
+	
+</section>
+	</body>
+</html>

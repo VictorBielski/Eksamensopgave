@@ -1,0 +1,623 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Byg en APP - Flow 3 Projekt</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+<!--------jQuery fra - https://css-tricks.com/snippets/jquery/smooth-scrolling/-------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-------jQuery fra - https://css-tricks.com/snippets/jquery/smooth-scrolling/--------->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});		
+</script>
+	
+<style>
+/***********GENERELT STYLING START************/
+	html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		text-align: center;
+}
+	img {
+		width: 100%;
+		height: 100%;
+}
+
+	section {
+		min-height: 100%;
+		min-width: 100%;
+}
+
+	a {
+		text-decoration: none;
+}
+
+	li {
+		list-style-type: none;
+}
+
+	h1, h2, h3, a {
+		font-family: 'Lato', sans-serif;
+		font-weight: 500;
+		color: #000;
+		text-transform: uppercase;
+}
+
+	h2 {
+		color: #5d7177;
+}
+
+	h3 {
+		font-size: 40px;
+		padding-top: 8%;
+		margin-bottom: 5px;
+}
+
+	h4, p {
+		font-family: 'Lato', serif;
+		color: #494949;
+/***********GENERELT STYLING SLUT************/
+}
+	
+/***************HJEM START*******************/
+	#hjem {
+		background-image: url(billeder/opskriftapp_img.jpg);
+		background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		width: 100%;
+	
+}
+/**************HJEM SLUT********************/
+
+/**************BYG EN APP START************/
+	.bygenappt {
+		margin-top: -50px;
+		margin-left: -550px;
+		font-size: 30px;
+		font-family: "Raleway", sans-serif;
+}
+	.bygenapp {
+		padding-left: 5%;
+		float: left;
+		width: 26%;
+		position: absolute;
+		margin-top: 5%;
+		text-align: justify;
+		display: block;
+		direction: ltr;
+}
+	.ipad {
+		width: 25%; 
+		height: 60%;
+		position: relative;
+		margin-left: 23%;
+		margin-top: -40px;
+		position: absolute;
+}	
+	.iphone{
+		width: 12%; 
+		height: 40%;
+		position: relative;
+		margin-left: 8%;
+		margin-top: 120px;
+		position: absolute;
+}	
+	#faktaboks {
+	background-color: white;
+	width: 230px;
+	border: 1px solid black;
+	margin: 10px;
+	height: 270px;
+	margin-left: 35%;
+	margin-top: 75px;
+	position: absolute;
+	font-size: 15px;
+	font-family: "lato", sans-serif;
+}
+	.faktabokst {
+	position: absolute;
+	font-size: 150%;
+	font-family: "Raleway", sans-serif;
+	padding-top: 150px;
+	padding-left: 7%;
+}
+
+	.faktaul {
+	list-style-type: circle;
+	position: absolute;
+	padding-right: -20px;
+}
+	.ressourcer {
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.prjbeskrivelse {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 390px;
+		margin-left: -640px;
+}	
+	.prjbeskrivelse:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjrapport {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 390px;
+		margin-left: -420px;
+}	
+	.prjrapport:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjdone1 {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 390px;
+		margin-left: -235px;
+}	
+	.prjdone1:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjdone2 {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 390px;
+		margin-left: -60px;
+}	
+	.prjdone2:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.tilbage {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 120%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: -75px;
+		margin-left: -680px;
+	}
+	.tilbage:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+/*****************BYG EN APP SLUT*****************/
+
+/******************MEDIA QUERIE FOR DESKTOP VERSION******************/	
+	@media (min-width: 1824px) and (max-width:2560px) {
+		.tilbage {
+			position: absolute;
+			margin-left: -49%;
+			margin-top: -4.5%;
+		}
+		.prjbeskrivelse {
+			margin-left: -45%;
+			font-size: 12px;
+		}
+		.prjrapport {
+			margin-left: -36%;
+			font-size: 12px;
+		}
+		.prjdone1 {
+			margin-left: -28%;
+			font-size: 12px;
+		}
+		.prjdone2 {
+			margin-left: -20.5%;
+			font-size: 12px;
+		}
+		.bygenapp {
+			width: 30%;
+		}
+		.bygenappt {
+			margin-right: -25%;
+			padding-top: 6%
+		}
+		.ipad {
+			width: 15%;
+			height: 50%;
+			margin-top: -2%
+		}
+		.iphone {
+			width: 10%;
+			margin-top: 3%;
+		}
+		#faktaboks {
+	background-color: white;
+	width: 230px;
+	border: 1px solid black;
+	margin: 10px;
+	height: 325px;
+	margin-left: 40%;
+	margin-top: 100px;
+	position: absolute;
+	font-size: 15px;
+	font-family: "lato", sans-serif;
+}
+		
+	}	
+	
+	/**************MEDIA QUERIE FOR TABLET VERSION*******************/
+	@media (min-width: 768px) and (max-width: 1024px) {
+		/*HJEM START*/
+		#hjem {
+			background-image: url(billeder/opskrift_img_ipad.jpg);
+			background-attachment: fixed;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+			width: 100%;
+		}
+		/*HJEM SLUT*/
+		
+		/*BYG EN APP START*/
+		.iphone {
+			display: none;
+		}
+		.ipad {
+			width: 25%;
+			height: 50%;
+			margin-left: 15%;
+			margin-top: -5%;
+		}
+		.bygenappt {
+			margin-left: -40%;
+			font-size: 150%;
+	}
+		.bygenapp {
+			width: 50%
+		}
+		.tilbage {
+			display: inline-block;
+			font-size: 10px;
+			line-height: 100%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 8px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: -5%;
+			margin-left: -49%;
+	}
+		.tilbage:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+}
+		.prjbeskrivelse {
+			display: inline-block;
+			font-size: 10px;
+			line-height: 100%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 300px;
+			margin-left: -440px;
+}	
+		.prjbeskrivelse:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+}
+	
+		.prjrapport {
+			display: inline-block;
+			font-size: 10px;
+			line-height: 100%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 300px;
+			margin-left: -290px;
+}	
+	
+		.prjrapport:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+}
+		.prjdone1 {
+			display: inline-block;
+			font-size: 10px;
+			line-height: 100%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 300px;
+			margin-left: -160px;
+}	
+	
+		.prjdone1:hover{
+			color: #4FA483;
+			background-color: rgba(255, 255, 255, 0.3);
+}
+	
+		.prjdone2 {
+			display: inline-block;
+			font-size: 10px;
+			line-height: 100%;
+			color: #00000;
+			background-color: transparent;
+			border: 1px solid #000;
+			padding: 10px 12px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color ease 400ms;
+			position: absolute;
+			margin-top: 300px;
+			margin-left: -40px;
+}	
+		#faktaboks {
+			display: none;
+		}
+	}
+		
+/****************************MEDIA QUERIES FOR TELEFON VERSION****************/
+@media (min-width: 320px) and (max-width: 480px) {
+	/*HJEM START*/
+	#hjem {
+		background-image: url(billeder/opskrift_img_iphone.jpg);
+		background-attachment: fixed;
+   		background-position: center;
+   		background-repeat: no-repeat;
+    	background-size: cover;
+		width: 100%;	
+		}
+	/*BYG EN APP START*/
+	.iphone {
+		width: 25%;
+		height: 35%;
+		margin-left: 15%;
+		margin-top: 3%;
+		}
+	.ipad {
+		display: none;
+		}
+	.bygenappt {
+		margin-left: -34%;
+		font-size: 80%;
+		margin-top: 1%;
+		font-weight: bolder;
+	}
+	.bygenapp {
+		margin-top: 10%;
+		font-size: 70%;
+		width: 55%;
+	}
+		
+	.tilbage {
+		display: inline-block;
+		font-size: 7px;
+		line-height: 80%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 8px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: -14%;
+		margin-left: -49%;
+	}
+	.tilbage:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjbeskrivelse {
+		display: inline-block;
+		font-size: 7px;
+		line-height: 70%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 300px;
+		margin-left: -185px;
+}	
+	.prjbeskrivelse:hover{
+		color: #a34f4f;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjrapport {
+		display: inline-block;
+		font-size: 7px;
+		line-height: 80%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 300px;
+		margin-left: -80px;
+}	
+	
+	.prjrapport:hover{
+		color: #a34f4f;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjdone1 {
+		display: inline-block;
+		font-size: 7px;
+		line-height: 80%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 300px;
+		margin-left: 15px;
+}	
+	
+	.prjdone1:hover{
+		color: #4FA483;
+		background-color: rgba(255, 255, 255, 0.3);
+}
+	
+	.prjdone2 {
+		display: inline-block;
+		font-size: 7px;
+		line-height: 80%;
+		color: #00000;
+		background-color: transparent;
+		border: 1px solid #000;
+		padding: 10px 12px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color ease 400ms;
+		position: absolute;
+		margin-top: 300px;
+		margin-left: 105px;
+}
+	#faktaboks {
+		display: none;
+	}
+	
+	/*BYG EN APP SLUT*/
+		}
+</style>	
+</head>
+
+<body>
+
+<!--Forside/Hjem sektionen starter her-->
+<section id="hjem">
+</section>
+<!--Forside/Hjem sektionen slutter her-->
+	
+	
+<!--BYG EN APP SEKTION STARTER HER-->	
+<section id="bygenapps">
+		<h3 class="bygenappt">Byg en APP - Flow 3 Projekt</h3>
+		<p class="bygenapp">I Flow 3, var de grundlæggende ting vi blev undervist i personas, brugertest og Adobe Illustraor.<br><br>På baggrund af det vi lærte om at arbejde i Adobe Illustrator skulle vi designe en prototype af en APP i Adobe Experience Design, hvor alle de elementer vi brugte skulle være tegnet i Adobe Illustrator. Ydermere skulle vi gøre brug af brugertest og personas i dette projekt <br><br>
+		<strong>Har du yderligere interesse i projektet, kan du downloade følgende herunder: Projekt beskrivelse, Projekt rapport samt en iPhone og iPad version af den færdige APP.</strong>
+</p>
+		<div id="faktaboks">
+	<ul class="faktaul">
+	<li style="list-style-type: circle;">1. Semester</li>
+	<br>
+	<li style="list-style-type: circle;">Flow 3</li>	
+	<br>
+	<li style="list-style-type: circle;">Lavet individuelt</li>	
+
+	<h3 class="ressourcer">Ressourcer</h3>
+	<br>
+	<li style="list-style-type: circle;">Adobe Experience Design</li>	
+	<br>
+	<li style="list-style-type: circle;">Adobe Illustrator</li>
+	<br>
+	<li style="list-style-type: circle;">Adobe Photoshop</li>
+	</ul>
+	</div>
+		<a href="Opgaver/Byg en APP – Flow 3 Projekt Beskrivelse.pdf" class="prjbeskrivelse">Opgave beskrivelse</a>
+		<a href="Opgaver/Opskrift APP.pdf" class="prjrapport">Projekt rapport</a>
+		<a href="https://xd.adobe.com/view/81ed3760-3611-44ae-971a-1825a413eccd/" class="prjdone1">iPhone version</a>
+		<a href="https://xd.adobe.com/view/43b2f469-1802-4629-a647-451714150350/" class="prjdone2">iPad version</a>
+		<img src="billeder/opskriftapp_ipad.png" class="ipad">
+		<img src="billeder/iphoneapp.png" class="iphone">
+		<a href="index.html#projekter" class="tilbage">Gå tilbage</a>
+</section>
+<!--BYG EN APP SEKTION SLUTTER HER-->	
+	</body>
+</html>

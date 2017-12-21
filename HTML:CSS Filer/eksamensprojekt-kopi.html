@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eksamens projekt - Flow 5</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+/************GENERELT STYLING START**************/	
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	text-align: center;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	min-height: 100%;
+	min-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+h1, h2, h3, a {
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	color: #000;
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h2 {
+	color: #5d7177;
+}
+
+h3 {
+	font-size: 40px;
+	padding-top: 8%;
+	margin-bottom: 5px;
+}
+
+h4, p {
+	font-family: 'Lato', serif;
+	color: #494949;
+}
+/************GENERELT STYLING SLUT**************/	
+
+	
+/**************HJEM STYLING START**************/	
+#hjem {
+	background-image: url(billeder/eksamens_prj_baggrundsbillede.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+	height: auto;
+	
+}
+/**************HJEM STYLING SLUT**************/
+
+/*******EKSAMENSPRJ STYLING START************/
+.eksamensprj_t {
+	margin-top: -50px;
+	margin-left: -550px;
+	font-size: 30px;
+	font-family: "Raleway", sans-serif;
+}
+.eksamensprj_b {
+	padding-left: 5%;
+	float: left;
+	width: 30%;
+	position: absolute;
+	margin-top: 5%;
+	text-align: justify;
+	display: block;
+	direction: ltr;
+}
+.ipad {
+	width: 20%; 
+	height: 50%;
+	position: relative;
+	margin-left: 28%;
+	margin-top: -3%;
+	position: absolute;
+}	
+	
+.iphone{
+	width: 12%; 
+	height: 40%;
+	position: relative;
+	margin-left: 14%;
+	margin-top: 3%;
+	position: absolute;
+}	
+	#faktaboks {
+	background-color: white;
+	width: 230px;
+	border: 1px solid black;
+	margin: 10px;
+	height: 350px;
+	margin-left: 40%;
+	margin-top: 75px;
+	position: absolute;
+	font-size: 15px;
+	font-family: "lato", sans-serif;
+}
+	.faktabokst {
+	position: absolute;
+	font-size: 150%;
+	font-family: "Raleway", sans-serif;
+	padding-top: 150px;
+	padding-left: 7%;
+}
+
+	.faktaul {
+	list-style-type: circle;
+	position: absolute;
+	padding-right: -20px;
+}
+	.ressourcer {
+		font-size: 15px;
+		font-weight: bold;
+	}
+	
+.prjbeskrivelse {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 120%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 390px;
+	margin-left: -640px;
+}	
+	
+	.prjbeskrivelse:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	
+	.prjrapport {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 120%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 390px;
+	margin-left: -480px;
+}	
+	
+	.prjrapport:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.prjdone1 {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 120%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 390px;
+	margin-left: -340px;
+}	
+	
+	.prjdone1:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	.tilbage {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 120%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: -75px;
+	margin-left: -680px;
+	}
+	.tilbage:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*******EKSAMENSPRJ STYLING SLUT************/
+
+/*************MEDIA QUERIES FOR DESKTOP VERSION******************/
+	
+	@media (min-width: 1824px) and (max-width:2560px){
+		.tilbage {
+			margin-left: -49%;
+			margin-top: -7%;
+		}
+		.eksamensprj_t {
+			margin-left: 0;
+		}
+		.prjbeskrivelse {
+			margin-left: -45%;
+		}
+		.prjrapport {
+			margin-left: -32.5%;
+		}
+		.prjdone1 {
+			margin-left: -21%;
+		}
+		.ipad {
+			height: 40%;
+			width: 15%;
+			margin-top: 2%;
+		}
+		.iphone {
+			height: 30%;
+			width: 8%;
+			margin-top: 7%;
+		}
+		
+		
+	}
+	
+/******MEDIA QUERIES FOR TABLET VERSION*****/	
+	
+	@media (min-width: 768px) and (max-width: 1024px) {
+/**********HJEM STYLING START**************/	
+	#hjem {
+	background-image: url(billeder/eks_prj_bg_ipad.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+		}
+/***********HJEM STYLING SLUT************/
+		
+/*******EKSAMENSPRJ STYLING START************/		
+	.iphone {
+	display: none;
+		}
+	.ipad {
+	width: 25%;
+	height: 50%;
+	margin-left: 15%;
+	margin-top: -2%;
+		}
+	.eksamensprj_t {
+	margin-left: -40%;
+	font-size: 150%;
+	}
+		.eksamensprj_b {
+			width: 50%
+		}
+	.tilbage {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 100%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 8px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: -5%;
+	margin-left: -49%;
+	}
+	.tilbage:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	#faktaboks {
+	display: none;
+		}
+	.prjbeskrivelse {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 100%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 320px;
+	margin-left: -460px;
+}	
+	.prjbeskrivelse:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjrapport {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 100%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 320px;
+	margin-left: -270px;
+}	
+	.prjrapport:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.prjdone1 {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 100%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 320px;
+	margin-left: -80px;
+}	
+	.prjdone1:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjdone2 {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 100%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 300px;
+	margin-left: -70px;
+}	
+	}	
+/*******EKSAMENSPRJ STYLING START************/		
+	
+/*********MEDIA QUERIES FOR MOBIL VERSION***********/	
+@media (min-width: 320px) and (max-width: 480px) {
+	
+/***********HJEM STYLING START*************/
+	#hjem {
+	background-image: url(billeder/eksam_prj_bag.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+/***********HJEM STYLING SLUT*************/		
+		}
+	
+/*******EKSAMENSPRJ STYLING START********/
+	.iphone {
+	width: 25%;
+	height: 35%;
+	margin-left: 15%;
+	margin-top: 3%;
+		}
+	.ipad {
+	display: none;
+		}
+	.eksamensprj_t {
+	margin-left: 0%;
+	font-size: 80%;
+	margin-top: 1%;
+	font-weight: bolder;
+	}
+	.eksamensprj_b {
+	margin-top: 10%;
+	font-size: 70%;
+		width: 55%
+	}
+	
+	#faktaboks {
+		display: none;
+	}
+	.tilbage {
+	display: inline-block;
+	font-size: 7px;
+	line-height: 80%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 8px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: -13%;
+	margin-left: -49%;
+	}
+	.tilbage:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjbeskrivelse {
+	display: inline-block;
+	font-size: 7px;
+	line-height: 70%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 300px;
+	margin-left: -170px;
+}	
+	.prjbeskrivelse:hover{
+	color: #a34f4f;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+	.prjrapport {
+	display: inline-block;
+	font-size: 7px;
+	line-height: 80%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 300px;
+	margin-left: -60px;
+}	
+	.prjrapport:hover{
+	color: #a34f4f;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.prjdone1 {
+	display: inline-block;
+	font-size: 7px;
+	line-height: 80%;
+	color: #00000;
+	background-color: transparent;
+	border: 1px solid #000;
+	padding: 10px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color ease 400ms;
+	position: absolute;
+	margin-top: 300px;
+	margin-left: 50px;
+}	
+	.prjdone1:hover{
+	color: #4FA483;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+		}
+/*******EKSAMENSPRJ STYLING START********/
+</style>	
+</head>
+
+<body>
+<!------------HJEM SEKTION STARTER HER-------------->
+<section id="hjem">
+</section>
+<!------------HJEM SEKTION SLUTTER HER-------------->	
+	
+<!--------EKSAMENSPRJ SEKTIONEN STARTER HER--------->	
+<section id="eksamensprj">
+		<h3 class="eksamensprj_t">Eksamensprojekt - Flow 5</h3>
+		<p class="eksamensprj_b">I Flow 5 er vores eksamensprojekt at finde. I dette projekt skulel vi lave en remake af vores portfolio, som vi lavede tilbage i Flow 2. Vi skullle gøre brug af de begreber vi har lært om i første semester, og bruge dem til at udforme vores nye portfolio<br><br>
+		<strong>Har du yderligere interesse i projektet, kan du downloade følgende herunder: Projekt beskrivelse, Projekt rapport samt det færdige produkt</strong>
+		</p>
+		<div id="faktaboks">
+	<ul class="faktaul">
+	<li style="list-style-type: circle;">1. Semester</li>
+	<br>
+	<li style="list-style-type: circle;">Flow 5</li>	
+	<br>
+	<li style="list-style-type: circle;">Lavet individuelt</li>	
+
+	<h3 class="ressourcer">Ressourcer</h3>
+	<br>
+	<li style="list-style-type: circle;">Adobe Experience Design</li>	
+	<br>
+	<li style="list-style-type: circle;">Adobe Illustrator</li>
+	<br>
+	<li style="list-style-type: circle;">Adobe Photoshop</li>
+	<br>
+	<li style="list-style-type: circle;">Adobe Dreamviewer</li>
+	</ul>
+
+	</div>
+		<a 	href="Opgaver/eksamensprojekt.pdf" class="prjbeskrivelse">Opgave beskrivelse</a>
+		<a href="#prjrapport" class="prjrapport">Projekt rapport</a>
+		<a href="index.html" class="prjdone1">Færdigt produkt</a>
+	
+		<img src="billeder/eksamensprj_iphone.png" class="iphone">
+		<img src="billeder/eksamensprj_ipad.png" class="ipad">
+		<a href="index.html#projekter" class="tilbage">Gå tilbage</a>
+</section>
+<!--------EKSAMENSPRJ SEKTIONEN STARTER HER--------->	
+	</body>
+</html>
